@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>ACCESS NODE</title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+  <div class="noise"></div>
+
+  <div class="container">
+
+    <p class="status">
+    ACCESS NODE ACTIVE
+    </p>
+
+    <h1>
+    ENTER ACCESS CODE
+    </h1>
+
+    <input
+    type="text"
+    id="codeInput"
+    placeholder=">">
+
+    <button onclick="checkCode()">
+    ENTER
+    </button>
+
+    <p id="message"></p>
+    <div id="directory" style="display:none;">
+
+  <h2>DIRECTORY FOUND</h2>
+
+  <p>NODE: 4-G0Ny</p>
+
+  <p>STATUS: ACTIVE</p>
+
+  <br>
+
+  <div class="files">
+
+<p onclick="openAudioFile()">
+audio_log_01.wav
+</p>
+
+    <p>case_report_04.txt</p>
+
+    <p>image_fragment.png</p>
+
+    <p>chat_archive.zip</p>
+
+  </div>
+
+</div>
+
+  </div>
+
+  <div id="audioFile"
+style="display:none;">
+
+  <h2>FILE RECOVERED</h2>
+
+  <p>audio_log_01.wav</p>
+
+  <br>
+
+  <p>
+  STATUS:
+  PARTIALLY CORRUPTED
+  </p>
+
+  <p>
+  RECOVERY:
+<span id="recoveryStatus">
+12%
+</span>
+  </p>
+
+  <br>
+
+  <p>
+  SUB-ACCESS CODE REQUIRED
+  </p>
+  <br>
+
+<input
+type="text"
+id="subCodeInput"
+placeholder="SUB-CODE">
+
+<br><br>
+
+<button onclick="checkSubCode()">
+RECOVER FILE
+</button>
+  <br>
+
+<audio controls
+id="realAudio"
+style="display:none;">
+
+<source
+src="4-G0Ny_found_audio_1.mp3"
+type="audio/mpeg">
+
+</audio>
+
+</div> <script src="script.js"></script>
+
+</body>
+
+</html>
